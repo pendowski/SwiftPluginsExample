@@ -9,11 +9,7 @@
 import Foundation
 
 
-class SamplePlugin : PluginInterface
+class SamplePlugin : NSObject, PluginInterface
 {
-    @objc var name = "SamplePlugin"
-    
-    @objc required init() {
-        
-    }
+    var name = "SamplePlugin"
 }

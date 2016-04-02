@@ -31,10 +31,12 @@ class PluginHost
                     let isDirectory = isDirectory as? NSNumber where isDirectory.boolValue,
                     let bundle = NSBundle(URL: item) where bundle.load() {
                     
-                        if let cls = bundle.principalClass as? PluginInterface.Type {
-                            let plugin = cls.init()
-                            
-                            plugins.append(plugin)
+                        if let cls = bundle.principalClass as? NSObject.Type,
+                            plugin = cls.init() as? PluginInterface {
+                                
+                                plugins.append(plugin)
+                                
+                                print("> Plugin: \(plugin.name) loaded")
                         }
                 }
                 

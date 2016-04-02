@@ -11,8 +11,6 @@
 		AA8744281CAFF2CC006245BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8744271CAFF2CC006245BF /* Assets.xcassets */; };
 		AA87442B1CAFF2CC006245BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8744291CAFF2CC006245BF /* MainMenu.xib */; };
 		AA8744361CAFF2CC006245BF /* PluginHostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8744351CAFF2CC006245BF /* PluginHostTests.swift */; };
-		AA87444B1CAFF52D006245BF /* PluginInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87444A1CAFF52D006245BF /* PluginInterface.swift */; };
-		AA87444C1CAFF53E006245BF /* PluginInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87444A1CAFF52D006245BF /* PluginInterface.swift */; };
 		AA87444E1CAFF739006245BF /* SamplePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87444D1CAFF739006245BF /* SamplePlugin.swift */; };
 		AA8744501CAFFC94006245BF /* PluginHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87444F1CAFFC94006245BF /* PluginHost.swift */; };
 /* End PBXBuildFile section */
@@ -38,9 +36,11 @@
 		AA8744371CAFF2CC006245BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8744441CAFF4EA006245BF /* SamplePlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplePlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8744461CAFF4EA006245BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA87444A1CAFF52D006245BF /* PluginInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginInterface.swift; sourceTree = "<group>"; };
 		AA87444D1CAFF739006245BF /* SamplePlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePlugin.swift; sourceTree = "<group>"; };
 		AA87444F1CAFFC94006245BF /* PluginHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginHost.swift; sourceTree = "<group>"; };
+		AAF337A81CB00E2F001C7B13 /* PluginInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginInterface.h; sourceTree = "<group>"; };
+		AAF337A91CB00ED1001C7B13 /* PluginHost-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PluginHost-Bridging-Header.h"; sourceTree = "<group>"; };
+		AAF337AA1CB00F5F001C7B13 /* SamplePlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SamplePlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +91,13 @@
 		AA8744241CAFF2CC006245BF /* PluginHost */ = {
 			isa = PBXGroup;
 			children = (
-				AA87444A1CAFF52D006245BF /* PluginInterface.swift */,
 				AA87444F1CAFFC94006245BF /* PluginHost.swift */,
 				AA8744251CAFF2CC006245BF /* AppDelegate.swift */,
 				AA8744271CAFF2CC006245BF /* Assets.xcassets */,
 				AA8744291CAFF2CC006245BF /* MainMenu.xib */,
 				AA87442C1CAFF2CC006245BF /* Info.plist */,
+				AAF337A81CB00E2F001C7B13 /* PluginInterface.h */,
+				AAF337A91CB00ED1001C7B13 /* PluginHost-Bridging-Header.h */,
 			);
 			path = PluginHost;
 			sourceTree = "<group>";
@@ -115,6 +116,7 @@
 			children = (
 				AA8744461CAFF4EA006245BF /* Info.plist */,
 				AA87444D1CAFF739006245BF /* SamplePlugin.swift */,
+				AAF337AA1CB00F5F001C7B13 /* SamplePlugin-Bridging-Header.h */,
 			);
 			path = SamplePlugin;
 			sourceTree = "<group>";
@@ -247,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA87444B1CAFF52D006245BF /* PluginInterface.swift in Sources */,
 				AA8744501CAFFC94006245BF /* PluginHost.swift in Sources */,
 				AA8744261CAFF2CC006245BF /* AppDelegate.swift in Sources */,
 			);
@@ -266,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA87444E1CAFF739006245BF /* SamplePlugin.swift in Sources */,
-				AA87444C1CAFF53E006245BF /* PluginInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +381,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pendowski.PluginHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PluginHost/PluginHost-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -393,6 +394,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pendowski.PluginHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PluginHost/PluginHost-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -431,6 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pendowski.SamplePlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SamplePlugin/SamplePlugin-Bridging-Header.h";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -444,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pendowski.SamplePlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SamplePlugin/SamplePlugin-Bridging-Header.h";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -467,6 +471,7 @@
 				AA87443C1CAFF2CC006245BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA87443D1CAFF2CC006245BF /* Build configuration list for PBXNativeTarget "PluginHostTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +480,7 @@
 				AA87443F1CAFF2CC006245BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA8744471CAFF4EA006245BF /* Build configuration list for PBXNativeTarget "SamplePlugin" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +489,7 @@
 				AA8744491CAFF4EA006245BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
