@@ -11,6 +11,8 @@
 
 @protocol PluginInterface <NSObject>
 
-@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString * _Nonnull name;
+
+- (NSString * _Nullable)convertString:(NSString * _Nullable)string;
 
 @end
