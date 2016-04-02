@@ -11,6 +11,9 @@
 		AA8744281CAFF2CC006245BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8744271CAFF2CC006245BF /* Assets.xcassets */; };
 		AA87442B1CAFF2CC006245BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8744291CAFF2CC006245BF /* MainMenu.xib */; };
 		AA8744361CAFF2CC006245BF /* PluginHostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8744351CAFF2CC006245BF /* PluginHostTests.swift */; };
+		AA87444B1CAFF52D006245BF /* PluginInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87444A1CAFF52D006245BF /* PluginInterface.swift */; };
+		AA87444C1CAFF53E006245BF /* PluginInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87444A1CAFF52D006245BF /* PluginInterface.swift */; };
+		AA87444E1CAFF739006245BF /* SamplePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87444D1CAFF739006245BF /* SamplePlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,10 @@
 		AA8744311CAFF2CC006245BF /* PluginHostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginHostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8744351CAFF2CC006245BF /* PluginHostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluginHostTests.swift; sourceTree = "<group>"; };
 		AA8744371CAFF2CC006245BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8744441CAFF4EA006245BF /* SamplePlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplePlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA8744461CAFF4EA006245BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA87444A1CAFF52D006245BF /* PluginInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluginInterface.swift; sourceTree = "<group>"; };
+		AA87444D1CAFF739006245BF /* SamplePlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePlugin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA8744411CAFF4EA006245BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +71,7 @@
 			children = (
 				AA8744241CAFF2CC006245BF /* PluginHost */,
 				AA8744341CAFF2CC006245BF /* PluginHostTests */,
+				AA8744451CAFF4EA006245BF /* SamplePlugin */,
 				AA8744231CAFF2CC006245BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +81,7 @@
 			children = (
 				AA8744221CAFF2CC006245BF /* PluginHost.app */,
 				AA8744311CAFF2CC006245BF /* PluginHostTests.xctest */,
+				AA8744441CAFF4EA006245BF /* SamplePlugin.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +89,7 @@
 		AA8744241CAFF2CC006245BF /* PluginHost */ = {
 			isa = PBXGroup;
 			children = (
+				AA87444A1CAFF52D006245BF /* PluginInterface.swift */,
 				AA8744251CAFF2CC006245BF /* AppDelegate.swift */,
 				AA8744271CAFF2CC006245BF /* Assets.xcassets */,
 				AA8744291CAFF2CC006245BF /* MainMenu.xib */,
@@ -88,6 +105,15 @@
 				AA8744371CAFF2CC006245BF /* Info.plist */,
 			);
 			path = PluginHostTests;
+			sourceTree = "<group>";
+		};
+		AA8744451CAFF4EA006245BF /* SamplePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				AA8744461CAFF4EA006245BF /* Info.plist */,
+				AA87444D1CAFF739006245BF /* SamplePlugin.swift */,
+			);
+			path = SamplePlugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +154,23 @@
 			productReference = AA8744311CAFF2CC006245BF /* PluginHostTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AA8744431CAFF4EA006245BF /* SamplePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA8744471CAFF4EA006245BF /* Build configuration list for PBXNativeTarget "SamplePlugin" */;
+			buildPhases = (
+				AA8744401CAFF4EA006245BF /* Sources */,
+				AA8744411CAFF4EA006245BF /* Frameworks */,
+				AA8744421CAFF4EA006245BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamplePlugin;
+			productName = SamplePlugin;
+			productReference = AA8744441CAFF4EA006245BF /* SamplePlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -144,6 +187,9 @@
 					AA8744301CAFF2CC006245BF = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = AA8744211CAFF2CB006245BF;
+					};
+					AA8744431CAFF4EA006245BF = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -162,6 +208,7 @@
 			targets = (
 				AA8744211CAFF2CB006245BF /* PluginHost */,
 				AA8744301CAFF2CC006245BF /* PluginHostTests */,
+				AA8744431CAFF4EA006245BF /* SamplePlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +230,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA8744421CAFF4EA006245BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -190,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA87444B1CAFF52D006245BF /* PluginInterface.swift in Sources */,
 				AA8744261CAFF2CC006245BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +254,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA8744361CAFF2CC006245BF /* PluginHostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8744401CAFF4EA006245BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA87444E1CAFF739006245BF /* SamplePlugin.swift in Sources */,
+				AA87444C1CAFF53E006245BF /* PluginInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +418,32 @@
 			};
 			name = Release;
 		};
+		AA8744481CAFF4EA006245BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SamplePlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pendowski.SamplePlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AA8744491CAFF4EA006245BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SamplePlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pendowski.SamplePlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -379,6 +469,14 @@
 			buildConfigurations = (
 				AA87443E1CAFF2CC006245BF /* Debug */,
 				AA87443F1CAFF2CC006245BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA8744471CAFF4EA006245BF /* Build configuration list for PBXNativeTarget "SamplePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA8744481CAFF4EA006245BF /* Debug */,
+				AA8744491CAFF4EA006245BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

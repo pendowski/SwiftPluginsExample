@@ -8,18 +8,22 @@
 
 import Cocoa
 
+
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate
+{
 
     @IBOutlet weak var window: NSWindow!
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+    func applicationDidFinishLaunching(aNotification: NSNotification)
+    {
+        let path = NSBundle.mainBundle().bundlePath
+        pluginHost.loadPluginsFromPath(path.stringByAppendingString("/../"))
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+    func applicationWillTerminate(aNotification: NSNotification)
+    {
     }
 
 
