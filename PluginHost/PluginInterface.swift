@@ -12,4 +12,6 @@ import Foundation
 protocol PluginInterface
 {
     var name: String { get }
+    
+    init()
 }

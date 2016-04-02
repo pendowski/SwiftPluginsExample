@@ -12,4 +12,8 @@ import Foundation
 class SamplePlugin : PluginInterface
 {
     var name = "SamplePlugin"
+    
+    required init() {
+        
+    }
 }

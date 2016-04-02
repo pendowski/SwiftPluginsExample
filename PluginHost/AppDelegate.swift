@@ -14,7 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate
 {
 
     @IBOutlet weak var window: NSWindow!
-
+    
+    let pluginHost = PluginHost()
 
     func applicationDidFinishLaunching(aNotification: NSNotification)
     {
