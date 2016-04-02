@@ -11,9 +11,9 @@ import Foundation
 
 class SamplePlugin : PluginInterface
 {
-    var name = "SamplePlugin"
+    @objc var name = "SamplePlugin"
     
-    required init() {
+    @objc required init() {
         
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol PluginInterface
+@objc protocol PluginInterface
 {
     var name: String { get }
     
